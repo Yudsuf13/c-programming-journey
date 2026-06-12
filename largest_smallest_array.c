@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main(){
+    int n;
+    printf("Number elements? n = \n");
+    scanf("%d",&n);
+    int num[n];
+    //run-time array initialization part
+    for(int k=0; k<n; k++){
+        printf("n[%d]: ",k);
+        scanf("%d",&num[k]);
+    }
+    //To dismay the numbers list
+    printf("\nThe %d numbers are: ",n);
+    for(int s=0; s<n; s++){
+        printf("%d\t",num[s]);
+    }
+    //largest number logic
+    int i=0;
+    for(int j=1; j<n;j++){
+        if(num[j]>num[i]){
+            i=j;
+        }
+    }
+    printf("\nLargest number is: %d",num[i]);
+
+    //smallest number logic
+    int p=0;
+    for(int j=1; j<n;j++){
+        if(num[p]>num[j]){
+            p=j;
+        }
+    }
+    
+    printf("\nSmallest number is: %d",num[p]);
+
+    return 0;
+}
